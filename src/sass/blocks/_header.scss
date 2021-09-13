@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(201, 77, 77);
+    
+
+    &__text {
+        font-style: italic;
+        font-weight: 500;
+        font-size: 20px;
+        color:  #ddd;;
+        &:hover {
+            color: #860c0c;
+            text-transform: none;
+            text-decoration: none;
+        }
+    }
+
+}
