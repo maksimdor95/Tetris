@@ -34,7 +34,7 @@ $bezel-dark: rgb(150, 150, 150);
 		display: inline-block;
 		width: 140px;
 		height: 27px;
-		margin: 0 10px 8px 5px;
+		margin: 0 5px 8px 5px;
 		font-size: 15px;
 		border-radius: 5px;
 	}
@@ -42,7 +42,7 @@ $bezel-dark: rgb(150, 150, 150);
 		display: inline-block;
 		width: 140px;
 		height: 27px;
-		margin: 5px 5px;
+		margin: 0 5px 8px 5px;
 		font-size: 15px;
 		border-radius: 5px;
 	}
@@ -66,4 +66,5 @@ $bezel-dark: rgb(150, 150, 150);
 	color: $font-color;
 	border-radius: 15px;
 	box-shadow: $shadow;
+	font-weight: 500;
 }
