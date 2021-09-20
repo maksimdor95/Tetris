@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="Img\favicon\favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-    <section class="promo">
-        <div class="container">
-            <div class="promo__logo">
-                <img class="promo__img" src="Img\building-blocks-2026723_960_720.png" alt="logo">
-                <h1 class="promo__title">ТЕТРИС</h1>
-            </div>
-            <header class="header">
-                <a href="#" class="header__text">
-                    Очки <span id="score">0</span>
-                </a>
-                <a href="#" class="header__text">
-                   Линии <span id="lines">0</span>
-                </a>
-                <a href="#" class="header__text">
-                    Уровень  <span id="level">0</span>
-                </a>
-            </header>
-            <div class="promo__wrapper">
-                <div class="promo__space"></div>
-                <button class="promo__btn">Играть</button>
-            </div>
 
-            <div class="menu">
-                <div class="bottomMenu">
-                    <p>Размер доски:</p>
-                    <button class='50 bottomMenu_bottomButtonRow1'>размер: 50x30</button>
-                    <button class='70 bottomMenu_bottomButtonRow1 bottomMenu_activeButton'>размер: 70x50</button>
-                    <button class='100 bottomMenu_bottomButtonRow1'>размер: 100x80</button>
-                    <p>Скорость игры:&nbsp;</p>
-                    <button class='slow bottomMenu_bottomButtonRow2'>Медленная</button>
-                    <button class='medium bottomMenu_bottomButtonRow2'>Средняя</button>
-                    <button class='fast bottomMenu_bottomButtonRow2 bottomMenu_activeButton'>Быстрая</button>
-                </div>
-                
-                <div class='notice'>
-                    Наслаждайся игрой и улучшай свои рекорды!
-                </div>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <link rel="shortcut icon" href="Img\favicon\favicon-32x32.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="promo__logo">
+      <img class="promo__img" src="Img\building-blocks-2026723_960_720.png" alt="logo">
+      <h1 class="promo__title">Tetris</h1>
+    </div>
+    <header class="header">
+      <p class="header__text">Score: <span id="score">0</span></p>
+      <p class="header__text">Lines: <span id="lines">0</span></p>
+      <p class="header__text">Level: <span id="level">0</span></p>
+  
+    </header>
+  
+    <div class="grid">
+      <div class="left-column">
+        <button id="play-btn" onclick="play()" class="play-button">Play</button>
+        <button id="pause-btn" onclick="pause()" class="play-button">Pause</button>
+        <ol id="highScores"></ol>
+      </div> 
+      <canvas id="board" class="game-board"></canvas>
+      <div class="right-column">
+        <div>
+          <canvas id="next" class="next"></canvas>
         </div>
-    </section>
-    
-    <footer class="end">
-        <div class="end__text">Сознадо с &hearts;</div>
-    </footer>
-    
+        <!-- <button id="play-btn" onclick="play()" class="play-button">Play</button>
+        <button id="pause-btn" onclick="pause()" class="play-button">Pause</button> -->
+      </div>
+    </>
+  </div>
+  
+
+  <footer class="end">
+    <div class="end__text">Сознадо с &hearts;</div>
+  </footer>
+
+  <script src="js/constants.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/piece.js"></script>
+  <script src="js/main.js"></script>
+  
+
 </body>
+
 </html>
